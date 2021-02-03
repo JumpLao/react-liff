@@ -32,7 +32,7 @@ const initLiff = async <T extends LiffCore>({ liffId, stubEnabled }: LiffProvide
   }
 
   try {
-    const liff = window.liff ?? (await import('@line/liff'));
+    const liff = window.liff ?? (await import('@line/liff')).default;
     await liff.init({ liffId });
     return { liff, ready: true };
   } catch (error) {
