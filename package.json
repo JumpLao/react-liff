@@ -1,5 +1,5 @@
 {
-  "name": "react-liff",
+  "name": "react-liff-v2",
   "version": "0.7.1",
   "private": false,
   "description": "A react context provider for LIFF (LINE Front-end Framework)",
@@ -25,10 +25,9 @@
     "eslint:fix": "eslint --fix .",
     "prepack": "npm-run-all eslint clean build",
     "test": "jest",
-    "test:coverage": "jest --coverage",
-    "postinstall": "tsc"
+    "test:coverage": "jest --coverage"
   },
-  "dependencies": {
+  "devDependencies": {
     "@epaew/eslint-config": "git://github.com/epaew/eslint-config.git#master",
     "@line/liff": ">=2.3.0 <2.7.0",
     "@testing-library/react": "^11.0.2",
@@ -43,7 +42,12 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "rimraf": "^3.0.2",
-    "ts-jest": "^26.1.0"
+    "ts-jest": "^26.1.0",
+    "typescript": "^4.1.2"
+  },
+  "peerDependencies": {
+    "prop-types": "*",
+    "react": ">=16.14.0 <17.1.0"
   },
   "optionalDependencies": {
     "@line/liff": ">=2.3.0 <2.7.0"
